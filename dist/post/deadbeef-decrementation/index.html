@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     
-    <meta itemprop="name" content="404 – Page Not Found | ZENBERG">
-    <meta itemprop="description" content="Trying my luck">
+    <meta itemprop="name" content="Deadbeef Decrementation | ZENBERG">
+    <meta itemprop="description" content="How to decrement from a magic debug value to zero.">
 
     
-    <meta name="twitter:title" content="404 – Page Not Found | ZENBERG">
+    <meta name="twitter:title" content="Deadbeef Decrementation | ZENBERG">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="Trying my luck">
+    <meta name="twitter:description" content="How to decrement from a magic debug value to zero.">
     <meta name="twitter:site" content="@ReeseCodes">
     <meta name="twitter:creator" content="@ReeseCodes">
     <meta name="twitter:image:src" content="https://zenberg.org/twitter.jpg">
 
     
-    <meta name="og:title" content="404 – Page Not Found | ZENBERG">
-    <meta name="og:description" content="Trying my luck">
+    <meta name="og:title" content="Deadbeef Decrementation | ZENBERG">
+    <meta name="og:description" content="How to decrement from a magic debug value to zero.">
     <meta name="og:image" content="https://zenberg.org/og.jpg">
     <meta name="og:url" content="https://zenberg.org/">
     <meta name="og:site_name" content="ZENBERG">
@@ -28,7 +28,7 @@
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-    <title>404 – Page Not Found | ZENBERG</title>
+    <title>Deadbeef Decrementation | ZENBERG</title>
 
     <link rel="stylesheet" href="/assets/main.bundle.css">
 
@@ -61,9 +61,40 @@
 </header>
     <main class="container mx-auto max-w-3xl p-8 flex-grow">
       
-  <h2 class="mb-2">404 – Page Not Found</h2>
-  <p class="mb-2">The page you've requested can't be found.</p>
-  <a href="/">Go back to the homepage.</a>
+    <p></p>
+    <div>
+        <h2>Deadbeef Decrementation</h2>
+
+        
+            <p class="excerpt">How to decrement from a magic debug value to zero.</p>
+        
+
+        
+            <div class="mb-2">
+                <a class="tag spirituality" href="/tag/spirituality">spirituality</a>
+            </div>
+        
+
+        
+            
+                <p class="text-sm italic">Created on
+                    <span datetime="Sun Oct 09 2016 02:00:00 GMT+0200 (South Africa Standard Time)">October 9, 2016</span>.</p>
+            
+        
+
+        <div class="content post">
+            
+
+            <pre class="language-nasm"><code class="language-nasm"><span class="token comment">;run on Linux with: nasm -felf64 decrement.asm &amp;&amp; ld decrement.o &amp;&amp; ./a.out</span><br><br><span class="token keyword">global _start</span><br><br><span class="token keyword">section .text</span><br><br><span class="token label function">_start:</span><br>  mov <span class="token register variable">rax</span>, <span class="token number">0xDEADBEEF</span><br>  call decrement<br>  call exit<br><br><span class="token label function">decrement:</span><br>  dec <span class="token register variable">rax</span><br>  cmp <span class="token register variable">rax</span>, <span class="token number">0</span><br>  jg decrement<br>  ret<br><br><span class="token label function">exit:</span><br>  mov <span class="token register variable">rax</span>, <span class="token number">60</span><br>  syscall<br><span class="token string">``</span></code></pre>
+
+        </div>
+            <p class="uppercase text-xs mt-6">Previous</p>
+
+            <p class="font-bold">
+                <a href="/interior-crocodile-alligator/">Interior Crocodile Alligator, I Drive a Chevrolet Movie Theater</a>
+            </p>
+        
+    </div>
 
     </main>
     <footer class="bg-gray-900 pb-10">
